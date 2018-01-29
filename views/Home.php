@@ -42,8 +42,16 @@
             }
         }
 ?>
+<!--Insert Form-->
+<div class="row">
+ 
+  <hr>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-8">
 <div class="panel panel-default">
   <div class="panel-body">
+  <h2>Add New User</h2>
 <form action="" method="POST">
 
   <div class="form-group">
@@ -59,5 +67,30 @@
 </form>
 </div>
 </div>
+</div>
+<div class="col-md-2"></div>
+<!--View data-->
+<div class="row">
+ 
+  <hr>
+</div>
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="panel panel-default">
+  <div class="panel-body">
+  <h2>View All users</h2>
+<?php
+                    // Include config file
+                    require_once '../connect.php';
+                    
+                    viewusers ();
+ 
+                    // Close connection
+                    mysqli_close($conn);
+                    ?>
+</div>
+</div>
+</div>
+<div class="col-md-2"></div>
 </body>
 </html>
